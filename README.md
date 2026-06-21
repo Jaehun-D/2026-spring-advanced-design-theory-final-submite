@@ -25,10 +25,9 @@ https://github.com/philipdekim-OnD01/2026-spring-advanced-design-theory-final-su
 다음이 필요합니다.
 
 - GitHub 계정
-- Git 또는 GitHub Desktop
 - 제출할 과제 파일
 
-Git 명령어 사용이 어렵다면 GitHub Desktop을 사용해도 됩니다.
+GitHub 웹에서 제출하면 Git이나 GitHub Desktop을 설치하지 않아도 됩니다.
 
 ## 제출 폴더 이름 규칙
 
@@ -76,15 +75,23 @@ Git 명령어 사용이 어렵다면 GitHub Desktop을 사용해도 됩니다.
 `-- README.md
 ```
 
-## 제출 방법
+## 제출 방법 1: GitHub 웹에서 제출하기
 
-### 1. 저장소 Fork하기
+파일 수가 많지 않은 일반 과제는 이 방법을 권장합니다. 터미널 명령어를 사용하지 않아도 됩니다.
 
-1. 제출 저장소에 접속합니다.
-2. 오른쪽 위의 **Fork** 버튼을 누릅니다.
-3. 본인 GitHub 계정 아래에 fork를 만듭니다.
+### 1. 제출 저장소 접속하기
 
-Fork가 끝나면 본인 계정에 제출 저장소의 복사본이 생깁니다.
+아래 주소로 접속합니다.
+
+```text
+https://github.com/philipdekim-OnD01/2026-spring-advanced-design-theory-final-submite
+```
+
+### 2. 저장소 Fork하기
+
+1. 오른쪽 위의 **Fork** 버튼을 누릅니다.
+2. 본인 GitHub 계정 아래에 fork를 만듭니다.
+3. Fork가 끝나면 본인 계정에 제출 저장소의 복사본이 생깁니다.
 
 주의할 점:
 
@@ -94,86 +101,85 @@ Fork가 끝나면 본인 계정에 제출 저장소의 복사본이 생깁니다
 - 따라서 정상 운영 중에는 다른 학생의 제출 폴더가 본인 fork에 함께 들어오지 않습니다.
 - 만약 다른 학생 폴더가 보이더라도 수정하거나 삭제하지 말고, 본인 제출 폴더만 추가하세요.
 
-### 2. 본인 Fork를 컴퓨터로 받기
+### 3. 본인 제출 폴더 만들기
 
-본인 fork 저장소에서 초록색 **Code** 버튼을 누르고 HTTPS 주소를 복사합니다.
+본인 fork 저장소에서 다음 순서로 진행합니다.
 
-터미널에서 아래 명령을 실행합니다.
+1. **Add file**을 누릅니다.
+2. **Create new file**을 누릅니다.
+3. 파일 이름 입력칸에 아래 형식으로 입력합니다.
 
-```bash
-git clone 본인_FORK_주소
-cd 본인_FORK_폴더
+```text
+이름.최종과제.프로젝트명/README.md
 ```
-
-예시:
-
-```bash
-git clone https://github.com/본인아이디/2026-spring-advanced-design-theory-final-submite.git
-cd 2026-spring-advanced-design-theory-final-submite
-```
-
-### 3. 본인 폴더 만들기
-
-아래 예시처럼 본인 이름과 프로젝트명을 사용해 폴더를 만듭니다.
-
-```bash
-mkdir 홍길동.최종과제.My.Project
-```
-
-`홍길동.최종과제.My.Project` 부분은 반드시 본인의 이름과 프로젝트명으로 바꾸세요.
-
-### 4. 과제 파일 넣기
-
-과제 파일을 본인 폴더 안에 넣습니다.
 
 예시:
 
 ```text
-홍길동.최종과제.My.Project/report.pdf
-홍길동.최종과제.My.Project/source/main.py
-홍길동.최종과제.My.Project/figures/result.png
+홍길동.최종과제.Raspberry.Pi.Project/README.md
 ```
 
-다른 학생의 폴더는 수정하지 마세요.
+GitHub는 빈 폴더만 따로 만들 수 없습니다. 그래서 `폴더명/README.md`처럼 입력하면 폴더와 README 파일이 함께 만들어집니다.
 
-### 5. 변경 내용 저장하기
-
-터미널에서 아래 명령을 실행합니다.
-
-```bash
-git status
-git add .
-git commit -m "Submit final project - 이름"
-```
+README에는 프로젝트 제목, 설명, 제출 파일 목록을 간단히 적습니다.
 
 예시:
 
-```bash
-git commit -m "Submit final project - 홍길동"
+```text
+# 홍길동 최종과제
+
+## 프로젝트 제목
+
+Raspberry Pi Project
+
+## 제출 파일
+
+- report.pdf
+- source/
+- figures/
 ```
 
-### 6. 본인 Fork로 올리기
+4. 아래쪽 **Commit changes**를 누릅니다.
 
-아래 명령을 실행합니다.
+`Commit changes`를 누르면 본인 fork에 저장됩니다. Git 명령어로 치면 `git add`, `git commit`, `git push`를 한 것과 같습니다.
 
-```bash
-git push
+### 4. 과제 파일 업로드하기
+
+1. 방금 만든 본인 제출 폴더로 들어갑니다.
+2. **Add file**을 누릅니다.
+3. **Upload files**를 누릅니다.
+4. 과제 파일 또는 폴더를 드래그 앤 드롭합니다.
+5. 아래쪽 **Commit changes**를 누릅니다.
+
+컴퓨터에 아래와 같은 폴더가 있으면 폴더 전체를 드래그 앤 드롭해도 됩니다.
+
+```text
+홍길동.최종과제.Raspberry.Pi.Project/
+|-- README.md
+|-- report.pdf
+|-- source/
+|   `-- main.py
+`-- figures/
+    `-- result.png
 ```
 
-로그인이 필요하다는 안내가 나오면 GitHub 안내에 따라 로그인합니다.
+주의사항:
 
-### 7. Pull Request 만들기
+- 빈 폴더는 업로드되지 않습니다.
+- 폴더 안에 파일이 있어야 합니다.
+- 50MB 이상의 큰 파일이나 이미지 데이터가 많을 경우에는 아래의 "제출 방법 2"를 사용하세요.
 
-1. GitHub에서 본인 fork 저장소로 이동합니다.
-2. **Contribute** 버튼을 누릅니다.
-3. **Open pull request**를 누릅니다.
-4. base repository가 아래 저장소인지 확인합니다.
+### 5. Pull Request 만들기
+
+1. 본인 fork 저장소 위쪽의 **Contribute** 버튼을 누릅니다.
+2. **Open pull request**를 누릅니다.
+3. base repository가 아래 저장소인지 확인합니다.
 
    ```text
    philipdekim-OnD01/2026-spring-advanced-design-theory-final-submite
    ```
 
-5. Pull Request 제목은 아래 형식으로 작성합니다.
+4. Pull Request 제목은 아래 형식으로 작성합니다.
 
    ```text
    [최종과제 제출] 이름
@@ -185,25 +191,75 @@ git push
    [최종과제 제출] 홍길동
    ```
 
-6. **Create pull request**를 누릅니다.
+5. **Create pull request**를 누릅니다.
 
 Pull Request가 만들어지면 제출이 완료된 것입니다.
 
-학생이 본인 fork에 push하거나 Pull Request를 만들어도, 원본 저장소의 `main`에는 바로 들어가지 않습니다. 교수자가 **Merge pull request**를 눌러야만 원본 `main`에 반영됩니다.
+정리하면 다음과 같습니다.
+
+```text
+Commit changes = 본인 fork에 저장/push
+Create pull request = 교수자 저장소에 제출
+```
+
+학생이 본인 fork에 저장하거나 Pull Request를 만들어도, 원본 저장소의 `main`에는 바로 들어가지 않습니다. 교수자가 **Merge pull request**를 눌러야만 원본 `main`에 반영됩니다.
+
+## 제출 방법 2: 파일이 많거나 큰 데이터가 있는 경우
+
+이미지 데이터, 영상, 큰 모델 파일, ZIP 파일처럼 파일이 많거나 용량이 큰 경우에는 GitHub 저장소에 모두 직접 올리지 마세요.
+
+권장 방법은 다음과 같습니다.
+
+1. 본인 제출 폴더에는 `README.md`, 보고서, 핵심 코드만 올립니다.
+2. 이미지 데이터, 데이터셋, 영상, 큰 모델 파일은 Google Drive 또는 OneDrive에 업로드합니다.
+3. 공유 권한을 "링크가 있는 사람은 보기 가능"으로 설정합니다.
+4. 본인 제출 폴더의 `README.md`에 다운로드 링크를 적습니다.
+
+예시:
+
+```text
+홍길동.최종과제.Image.Dataset.Project/
+|-- README.md
+|-- report.pdf
+`-- source/
+    `-- train.py
+```
+
+`README.md` 안에는 아래처럼 적습니다.
+
+```text
+# 홍길동 최종과제
+
+## 큰 파일 다운로드
+
+- Image dataset: https://drive.google.com/...
+- Trained model: https://drive.google.com/...
+- Demo video: https://drive.google.com/...
+```
+
+50MB 이상의 파일은 이 방법을 사용하세요. 100MB 이상의 파일은 일반 GitHub push가 차단될 수 있습니다.
+
+GitHub Desktop 또는 터미널 사용이 익숙한 학생은 본인 fork를 clone해서 작업한 뒤 commit/push해도 됩니다. 하지만 큰 파일은 여전히 Drive/OneDrive 링크로 제출하는 것을 권장합니다.
 
 ## 제출 후 수정하고 싶을 때
 
 마감 전이라면 수정할 수 있습니다.
 
-파일을 고친 뒤 아래 명령을 실행합니다.
+GitHub 웹에서 수정하는 경우:
+
+1. 본인 fork 저장소로 이동합니다.
+2. 수정할 파일을 다시 업로드하거나 README를 수정합니다.
+3. **Commit changes**를 누릅니다.
+
+이미 만든 Pull Request는 자동으로 업데이트됩니다. 새 Pull Request를 다시 만들 필요가 없습니다.
+
+터미널에서 수정하는 경우에는 파일을 고친 뒤 아래 명령을 실행합니다.
 
 ```bash
 git add .
 git commit -m "Update assignment submission"
 git push
 ```
-
-이미 만든 Pull Request는 자동으로 업데이트됩니다. 새 Pull Request를 다시 만들 필요가 없습니다.
 
 ## 제출 규칙
 
@@ -212,7 +268,7 @@ git push
 - 다른 학생의 폴더나 파일을 수정하지 않습니다.
 - 다른 학생의 과제를 제출하지 않습니다.
 - `.DS_Store`, `.ipynb_checkpoints`, 임시 파일, 과제와 무관한 큰 데이터 파일은 넣지 않습니다.
-- 50MB 이상의 큰 파일은 저장소에 직접 올리지 말고, 아래의 "큰 파일 제출 방법"을 따릅니다.
+- 50MB 이상의 큰 파일은 저장소에 직접 올리지 말고, 위의 "제출 방법 2"를 따릅니다.
 - 제출 시간은 Pull Request 생성 시간과 commit 기록을 기준으로 확인할 수 있습니다.
 
 ## 제출물 Merge 운영 방식
@@ -229,43 +285,6 @@ git push
 - 마감 후 필요할 때만 merge하거나, merge하지 않고 Pull Request 상태 그대로 채점할 수 있습니다.
 
 따라서 학생은 다른 학생의 제출물이 포함되지 않은 기본 저장소를 fork해서 과제를 제출하면 됩니다.
-
-## 큰 파일 제출 방법
-
-GitHub 일반 저장소에는 큰 파일을 직접 올리지 않는 것이 좋습니다.
-
-- 50MB 이상 파일: GitHub에서 경고가 발생할 수 있습니다.
-- 100MB 이상 파일: 일반 Git push가 차단됩니다.
-- 예: 큰 모델 파일, 데이터셋, 영상 파일, ZIP 압축 파일
-
-50MB 이상의 파일은 다음 방법 중 하나로 제출하세요.
-
-1. Google Drive 또는 OneDrive에 업로드합니다.
-2. 공유 권한을 "링크가 있는 사람은 보기 가능"으로 설정합니다.
-3. 본인 제출 폴더 안에 `README.md`를 만들고 다운로드 링크를 적습니다.
-
-예시:
-
-```text
-홍길동.최종과제.My.Project/
-|-- README.md
-|-- report.pdf
-`-- source/
-```
-
-`README.md` 예시:
-
-```text
-# 홍길동 최종과제
-
-## 큰 파일 다운로드
-
-- Dataset: https://drive.google.com/...
-- Demo video: https://drive.google.com/...
-- Model file: https://drive.google.com/...
-```
-
-GitHub Releases를 사용할 수 있는 학생은 Releases에 큰 파일을 첨부하고, 본인 `README.md`에 Release 다운로드 링크를 적어도 됩니다.
 
 ## 제출 확인 방법
 
