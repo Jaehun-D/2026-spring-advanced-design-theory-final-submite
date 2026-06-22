@@ -41,7 +41,7 @@
 export RPS_DATASET_DIR=/your/path/RPS_Dataset
 export RPS_SAVE_DIR=/your/save/path
 
-## 학습된 모델 파일을 Google drive에 업로드하였습니다.
+## 학습 및 개발용 모델 파일(.HDF)을 Google drive에 업로드하였습니다.
 
 [Google drive 주소]
 https://drive.google.com/file/d/1BBzbJ5MzWsYoi16JOhrXErmBPJa2I3mY/view?usp=sharing
